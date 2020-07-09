@@ -18,4 +18,13 @@ print('档案读取完毕, 一共有', len(data), '笔资料')
 sum_len = 0
 for zl in data:
 	sum_len = sum_len + len(zl)                    #读第一个zl, 加进sum_len. 然后读第二个zl, 再加进新的sum_len
-print('每笔留言平均数是', sum_len/len(data))
+print('每笔留言平均数是', sum_len/len(data))         #算出每笔留言的平均数
+
+
+new = []
+for zl in data:
+	if len(zl) < 100:
+		new.append(zl)
+print('一共有', len(new), '笔留言长度小于100')       #for loop做完才print
+print(new[0])
+print(new[1])
